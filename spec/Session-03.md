@@ -105,7 +105,7 @@ In this step, we'll use the **axios** library to fetch data from an online servi
 1. In `PokemonList`, we'll fetch a list of `dexNumber`s and `name`s of all Pokémon
 2. In `PokemonDetail`, we'll fetch a particular Pokémon with the `dexNumber` matching the path param.
 
-Firstly, let's add a custom hook to our app: `useGet()`. This will allow us to reuse code associated ith sending HTTP `GET` requests to retrieve data. You can copy the following code into a file - the code was demonstrated in session three's live demo.
+Firstly, let's add a custom hook to our app: `useGet()`. This will allow us to reuse code associated ith sending HTTP `GET` requests to retrieve data. You can copy the following code into a file - the code was / will be demonstrated in a live demo.
 
 ```jsx
 import { useState, useEffect } from 'react';

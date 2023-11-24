@@ -1,8 +1,21 @@
+import PokemonList from "./PokemonList";
+import PokemonDetail from "./PokemonDetail";
+import pokemons from "./pokemon.json"
+import { useState } from "react";
 
-function App() {
-  return (
-    <h1>Your app here!</h1>
-  );
+export default function App() {
+
+let currentPokemon = pokemons[0];
+const [currentMon, setCurrentMon] = useState(currentPokemon);
+
+function updatePokemon(pokemon){
+  setCurrentMon(pokemon);
 }
 
-export default App;
+  return (
+    <div>
+      <PokemonList pokemonList = {pokemons} onPokemonClick={(pokemon)=>updatePokemon(pokemon)}/>
+      <PokemonDetail pokemon={currentMon}/>
+    </div>  
+  );
+}
